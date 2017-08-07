@@ -1,10 +1,12 @@
-# Linked Data Fragments Server
+# Linked Data Fragments Server with Ethereum backend
 <img src="http://linkeddatafragments.org/images/logo.svg" width="200" align="right" alt="" />
 
 [![Build Status](https://travis-ci.org/LinkedDataFragments/Server.js.svg?branch=master)](https://travis-ci.org/LinkedDataFragments/Server.js)
 [![npm version](https://badge.fury.io/js/ldf-server.svg)](https://www.npmjs.com/package/ldf-server)
 [![Docker Automated Build](https://img.shields.io/docker/automated/linkeddatafragments/server.js.svg)](https://hub.docker.com/r/linkeddatafragments/server.js/)
 [![DOI](https://zenodo.org/badge/16891600.svg)](https://zenodo.org/badge/latestdoi/16891600)
+
+This repository is a fork of the [LinkedDataFragments server](https://github.com/LinkedDataFragments/Server.js) to support using a backend with data stored in the [Ethereum](https://ethereum.org) distributed ledger. (We recommend a [Parity](https://github.com/paritytech/parity) network with a Proof of Authority setup for testing.) To use, compile and deploy RDFDataStore.sol on your distributed ledger network, make a note of its address and ABI, and configure this server following config/config-ethereum.json as an example. The rest is as below. 
 
 On today's Web, Linked Data is published in different ways,
 which include [data dumps](http://downloads.dbpedia.org/3.9/en/),
@@ -159,7 +161,7 @@ With native HTTPS, the server will establish the SSL layer. Set the following va
         }
       }
     }  
-  
+
   If `protocol`is not specified, it will derive the protocol from the `baseURL`. Hence, HTTPS can also be enabled as such:
 
      {
