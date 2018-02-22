@@ -246,3 +246,15 @@ dd {
     margin: 1em 0;
   }
 }
+
+#verifytype {
+  margin-top: 10px;
+  font-size: 1.05em;
+  font-weight: bold;
+}
+
+#unverifytype {
+  margin-top: 10px;
+  font-size: 1.05em;
+  font-weight: bold;
+}
